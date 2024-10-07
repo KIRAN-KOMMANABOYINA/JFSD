@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyer Page - Agriculture E-Commerce</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #00bcd4;
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            padding: 20px;
+            transition: left 0.3s ease;
+            z-index: 1000;
+        }
+
+        .sidebar h2 {
+            color: white;
+            text-align: center;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            margin: 10px 0;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .sidebar-toggle {
+            position: absolute;
+            top: 20px;
+            left: 260px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .main-content {
+            margin-left: 270px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            padding: 15px;
+            width: calc(33% - 30px); /* Three cards in a row */
+            transition: transform 0.2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .product-card p {
+            color: #555;
+        }
+
+        .product-card .price {
+            font-size: 1.5em;
+            color: #28a745;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            transition: background 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Buyer Dashboard</h2>
+        <a href="#view-sellers">View Sellers</a>
+        <a href="#my-cart">My Cart</a>
+        <a href="#my-orders">My Orders</a>
+        <a href="#wish-list">Wish List</a>
+        <a href="#profile">Profile</a>
+    </div>
+
+    <div class="main-content">
+        <div class="sidebar-toggle">☰</div>
+        <h1>Welcome to Buyer's Home</h1>
+        <div class="card-container">
+            <div class="product-card">
+                <h3>Organic Tomato</h3>
+                <p>Fresh organic tomatoes from local farms.</p>
+                <div class="price">$2.99 / kg</div>
+                <a href="#" class="btn-primary">Add to Cart</a>
+            </div>
+            <div class="product-card">
+                <h3>Fresh Lettuce</h3>
+                <p>Crisp and fresh lettuce for salads.</p>
+                <div class="price">$1.99 / kg</div>
+                <a href="#" class="btn-primary">Add to Cart</a>
+            </div>
+            <div class="product-card">
+                <h3>Red Bell Pepper</h3>
+                <p>Sweet and crunchy red bell peppers.</p>
+                <div class="price">$3.50 / kg</div>
+                <a href="#" class="btn-primary">Add to Cart</a>
+            </div>
+            <div class="product-card">
+                <h3>Organic Carrots</h3>
+                <p>Delicious organic carrots.</p>
+                <div class="price">$1.80 / kg</div>
+                <a href="#" class="btn-primary">Add to Cart</a>
+            </div>
+            <div class="product-card">
+                <h3>Fresh Spinach</h3>
+                <p>Nutrient-rich fresh spinach.</p>
+                <div class="price">$2.50 / kg</div>
+                <a href="#" class="btn-primary">Add to Cart</a>
+            </div>
+            <div class="product-card">
+                <h3>Green Beans</h3>
+                <p>Crisp green beans, perfect for stir-fries.</p>
+                <div class="price">$2.20 / kg</div>
+                <a href="#" class="btn-primary">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const sidebar = document.querySelector('.sidebar');
+        const toggleButton = document.querySelector('.sidebar-toggle');
+
+        toggleButton.addEventListener('click', () => {
+            const isOpen = sidebar.style.left === '0px';
+            sidebar.style.left = isOpen ? '-250px' : '0px';
+            document.querySelector('.main-content').style.marginLeft = isOpen ? '30px' : '270px';
+        });
+    </script>
+</body>
+</html>

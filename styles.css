@@ -1,0 +1,301 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    background-color: #2D572C;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo h1 {
+    color: white;
+    margin-left: 20px;
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-right: 20px;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FFA500;
+}
+
+/* 3D Card Styles */
+.container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.card-3d {
+    width: 350px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.card-3d:hover {
+    transform: rotateY(10deg) scale(1.05);
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #f9f9f9;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #2D572C;
+}
+
+.btn-primary {
+    background-color: #FFA500;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ff8c00;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.footer-text {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-text a {
+    color: #2D572C;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+/* 3D Animations */
+.card-3d {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: transform 0.6s;
+    backface-visibility: hidden;
+}
+
+.card-3d:hover {
+    transform: rotateY(20deg);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional styles for specific pages */
+
+/* Home Page */
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    flex-direction: column;
+}
+
+.home-content {
+    text-align: center;
+}
+
+.home-content h1 {
+    font-size: 48px;
+    color: #2D572C;
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.home-content .btn-primary {
+    padding: 15px 40px;
+    font-size: 18px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .navbar .logo h1 {
+        font-size: 20px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .card-3d {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .home-content p {
+        font-size: 18px;
+    }
+}
+/* Contact Form Styles */
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #f9f9f9;
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #2D572C;
+}
+
+textarea::placeholder {
+    color: #bbb;
+    font-size: 14px;
+}
+
+input::placeholder {
+    color: #bbb;
+    font-size: 14px;
+}
+
+/* Ensuring uniformity of input fields and textareas */
+.input-group input, .input-group textarea {
+    background-color: #f9f9f9;
+    font-size: 16px;
+}
+
+.input-group textarea {
+    height: 120px;
+}
+
+.btn-primary {
+    padding: 12px 30px;
+    font-size: 16px;
+}
+/* Dropdown for Customer Type */
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #f9f9f9;
+    color: #333;
+}
+
+select:focus {
+    outline: none;
+    border-color: #2D572C;
+}
+
+select option {
+    color: #333;
+    font-size: 16px;
+}
+/* Dropdown for Account Type */
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #f9f9f9;
+    color: #333;
+}
+
+select:focus {
+    outline: none;
+    border-color: #2D572C;
+}
+
+select option {
+    color: #333;
+    font-size: 16px;
+}
+
+
